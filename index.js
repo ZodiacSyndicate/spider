@@ -11,10 +11,8 @@ const puppeteer = require('puppeteer')
       node.map(v => {
         const name = v.querySelector('.flex.xs12.sm5.md6').querySelector('a')
           .innerText
-        const balance = v.querySelector('.flex.xs8.sm4.md3.text-xs-right')
-          .innerText
-        const percent = v.querySelector('.flex.xs4.sm3.md3.text-xs-right')
-          .innerText
+        const balance = v.querySelector('div.flex.xs8.sm4.md3.text-sm-right')
+        const percent = v.querySelector('div.flex.xs4.sm3.md3.text-xs-right')
         return { name, balance, percent }
       })
     )
